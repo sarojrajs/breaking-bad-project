@@ -13,8 +13,6 @@ function CharacterDetail() {
         const fetchDetails=async()=>{
             const result=await axios.get(`https://www.breakingbadapi.com/api/characters/${id}`)
             const quoteResult=await axios.get(`https://www.breakingbadapi.com/api/quote?author=${result.data[0].name}`)
-            console.log(result)
-            console.log(quoteResult)
             setCharacterData(result.data[0])
             setQuotes(quoteResult.data)
             setLoading(false)
