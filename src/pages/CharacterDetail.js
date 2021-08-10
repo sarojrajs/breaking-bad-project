@@ -51,7 +51,8 @@ function CharacterDetail() {
                 <div style={{width:'100%',padding:'20px'}}> 
                     <h1>Quotes:</h1>
                     {
-                    quotes.map((quote,index)=><p key={quote.quote_id}>{index+1}: {quote.quote}</p>)
+                    quotes.length!==0?quotes.map((quote,index)=><p key={quote.quote_id}>{index+1}: {quote.quote}</p>):
+                    <p>No such quotes</p>
                     }
                 </div>
                 
